@@ -66,6 +66,7 @@
     <Compile Include="DepartmentEventHandler.cs" />
     <Compile Include="EmployeeEventHanlder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserEventHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

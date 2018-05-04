@@ -125,7 +125,7 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
-    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extensions\AsyncTaskResultExtensions.cs" />
     <Compile Include="Extensions\ENodeExtensions.cs" />
     <Compile Include="Extensions\CustomJsonResult.cs" />

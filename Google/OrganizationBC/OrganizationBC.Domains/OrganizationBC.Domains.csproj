@@ -77,6 +77,10 @@
     <Compile Include="Employees\Events\EmployeeStatusChanged.cs" />
     <Compile Include="EventTopicContainer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Users\Events\UserCreated.cs" />
+    <Compile Include="Users\Events\UserRemoved.cs" />
+    <Compile Include="Users\Events\UserUpdated.cs" />
+    <Compile Include="Users\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
