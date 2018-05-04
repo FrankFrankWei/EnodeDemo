@@ -1,0 +1,109 @@
+﻿@model EQueue.AdminWeb.Models.LoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="zh" id="equeue" ng-app="equeue">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link type="text/css" rel="Stylesheet" href="@Url.Content("~/content/bootstrap/css/bootstrap.min.css")" />
+    <link type="text/css" rel="Stylesheet" href="@Url.Content("~/content/bootstrap/css/bootstrap-theme.min.css")" />
+    <script type="text/javascript" src="@Url.Content("~/content/jquery/jquery-1.10.2.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/bootstrap/js/bootstrap.min.js")"></script>
+    <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            color: #888;
+            line-height: 30px;
+            text-align: center;
+        }
+
+
+        h3 {
+	        font-size: 22px;
+            font-weight: 300;
+            color: #555;
+            line-height: 30px;
+        }
+
+
+        .form-box {
+	        margin-top: 35px;
+        }
+
+        .form-top {
+	        overflow: hidden;
+	        padding: 0 25px 15px 25px;
+	        background: #fff;
+	        -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; border-radius: 4px 4px 0 0;
+	        text-align: left;
+        }
+
+        .form-top-left {
+	        padding-top: 25px;
+            text-align:center;
+        }
+
+
+        .form-bottom {
+	        padding: 25px 25px 30px 25px;
+	        background: #eee;
+	        -moz-border-radius: 0 0 4px 4px; -webkit-border-radius: 0 0 4px 4px; border-radius: 0 0 4px 4px;
+	        text-align: left;
+        }
+
+
+        .form-bottom form button.btn {
+	        width: 100%;
+        }
+
+        .message{
+            margin-top:20px;
+            color:red
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Top content -->
+    <div class="top-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                        <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Equeue管理后台</h3>
+                            </div>
+                        </div>
+                        <div class="form-bottom">
+                            @using (Html.BeginForm("Login", "Admin"))
+                            {
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-username">登录名</label>
+                                    <input type="text" name="UserName" placeholder="Username..." class="form-username form-control" id="form-username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">密码</label>
+                                    <input type="password" name="Password" placeholder="Password..." class="form-password form-control" id="form-password">
+                                </div>
+                                <button type="submit" class="btn">登录</button>
+                            }
+                            <div class="message">
+                                <span>@ViewBag.Message</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</body>
+</html>
